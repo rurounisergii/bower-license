@@ -1,0 +1,19 @@
+#!/bin/bash 
+
+#Use this script in the directory that contains all the UI projects to create a full report
+
+rm -rf licenseReport.csv
+touch licenseReport.csv
+echo Application, Dependency, Version, Licenses >> licenseReport.csv
+
+for dir in */ ;
+do
+	echo "$dir"
+	cd "$dir"
+	#npm install
+	#bower install 
+	npm uninstall bower-license 
+	npm install -g https://github.com/rurounisergii/bower-license.git
+	bower-license -e csv "$dir" >> ../licenseReport.csv
+	cd ..
+done
