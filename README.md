@@ -2,15 +2,18 @@ Modified Version:
 
 This modified version of bower-license enables csv output
 
-bower-license -e csv .
+bower-license -e csv applicationName
 
 Will output the data in the following format:
 
-DirectoryName, Dependency, Version, Licenses
+ApplicationName, Dependency, Version, Licenses
 
-directoryName,angular-bootstrap,0.12.1,MIT
+e.g:
 
-directoryName,angular-translate,2.8.1,MIT
+applicationName,angular-bootstrap,0.12.1,MIT
+
+applicationName,angular-translate,2.8.1,MIT
+
 
 Bower License
 ===================
